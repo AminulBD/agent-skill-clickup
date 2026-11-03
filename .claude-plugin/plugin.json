@@ -1,0 +1,6 @@
+{
+  "name": "clickup",
+  "description": "Per-project ClickUp ticket workflow for agents: list, show, create with a required body template, update status, comment.",
+  "version": "1.0.0",
+  "author": {"name": "Aminul Islam"}
+}

@@ -1,0 +1,11 @@
+{
+  "name": "agent-skill-clickup",
+  "owner": {"name": "Aminul Islam"},
+  "plugins": [
+    {
+      "name": "clickup",
+      "source": "./",
+      "description": "Per-project ClickUp ticket workflow for agents (configured by .clickup.json)."
+    }
+  ]
+}

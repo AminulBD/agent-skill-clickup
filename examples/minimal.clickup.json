@@ -1,0 +1,6 @@
+{
+  "list_id": "901234567890",
+  "account": "work",
+  "token_files": [".clickup-token"],
+  "workflow": ["Move a ticket to 'in progress' when you start it and to 'review' when its PR is open."]
+}

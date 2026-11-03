@@ -1,0 +1,94 @@
+{
+  "_comment": "Example: a fictional 'Acme Shop' project using every option. Copy to <project root>/.clickup.json and adjust.",
+  "list_id": "901200000000",
+  "name": "Acme Shop — Web & Mobile",
+  "account": "work",
+  "token_env": "ACME_CLICKUP_TOKEN",
+  "token_files": [
+    "tools/.clickup-token"
+  ],
+  "statuses": [
+    {
+      "name": "backlog",
+      "type": "open",
+      "color": "#87909e"
+    },
+    {
+      "name": "ready",
+      "type": "custom",
+      "color": "#0f9d9f"
+    },
+    {
+      "name": "in progress",
+      "type": "custom",
+      "color": "#e16b16"
+    },
+    {
+      "name": "in review",
+      "type": "custom",
+      "color": "#ee5e99"
+    },
+    {
+      "name": "qa",
+      "type": "custom",
+      "color": "#b660e0"
+    },
+    {
+      "name": "blocked",
+      "type": "custom",
+      "color": "#d33d44"
+    },
+    {
+      "name": "done",
+      "type": "done",
+      "color": "#008844"
+    },
+    {
+      "name": "shipped",
+      "type": "done",
+      "color": "#2ea52c"
+    },
+    {
+      "name": "won't do",
+      "type": "closed",
+      "color": "#656f7d"
+    }
+  ],
+  "default_status": "backlog",
+  "status_aliases": {
+    "to do": "backlog",
+    "todo": "backlog",
+    "wip": "in progress",
+    "review": "in review"
+  },
+  "required_sections": [
+    "## Details",
+    "## Why",
+    "## How",
+    "## Implementation details",
+    "## Acceptance criteria"
+  ],
+  "template": "docs/ticket-template.md",
+  "name_pattern": "^\\[(WEB|APP|API|OPS)-\\d+\\] ",
+  "parents": {
+    "checkout": "86abc0001",
+    "search": "86abc0002",
+    "mobile-app": "86abc0003",
+    "infra": "86abc0004"
+  },
+  "default_tags": [
+    "agent"
+  ],
+  "workflow": [
+    "Statuses: backlog -> ready -> in progress -> in review -> qa -> done -> shipped; plus blocked (comment the reason) and won't do.",
+    "Move a ticket to 'in progress' when you start it, and to 'in review' when its PR is open and tests pass.",
+    "Never set 'shipped' unless it is live in production.",
+    "Name tickets with the area prefix, e.g. '[WEB-42] ...'; feature epics are parent tasks (use --parent checkout).",
+    "After each commit, comment on the ticket with what was done, the commit SHA and the PR link."
+  ],
+  "workspace_id": "9012000",
+  "space_id": "901200001",
+  "sprint_folder_id": "901200050",
+  "sprint_length_days": 14,
+  "sprint_name": "Sprint {n} ({start:%b %d} - {end:%b %d})"
+}
